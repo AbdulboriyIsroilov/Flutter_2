@@ -29,30 +29,51 @@ class MyApp extends StatelessWidget {
             child: Column(
               spacing: 20,
               children: [
-                // PlantCard(
-                //   str1: "Single Team Access",
-                //   str2: "30 days live streaming your favorite team",
-                //   color1: Color(0xFF552EFA),
-                //   color2: Color(0xFF7C5CFF),
-                //   buttomcolor: Color(0xFF613CFC),
-                //   price: 63,
-                // ),
-                // PlantCard(
-                //   str1: "14 Days VIP Access",
-                //   str2: "14 days live streaming all content",
-                //   color1: Color(0XFF8F00FF),
-                //   color2: Color(0xFFB75BFF),
-                //   buttomcolor: Color(0xFF9A19FF),
-                //   price: 29,
-                // ),
-                // PlantCard(
-                //   str1: "1 Month VIP Access",
-                //   str2: "1 Month live streaming all content",
-                //   color1: Color(0XFFFF238C),
-                //   color2: Color(0xFFFF6FB3),
-                //   buttomcolor: Color(0xFFFF3F9B),
-                //   price: 49,
-                // ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Choose Plan",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFEAEAEA),
+                      ),
+                    )
+                  ],
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    spacing: 15,
+                    children: [
+                      PlantCard(
+                        str1: "Single Team Access",
+                        str2: "30 days live streaming your favorite team",
+                        color1: Color(0xFF552EFA),
+                        color2: Color(0xFF7C5CFF),
+                        buttomcolor: Color(0xFF613CFC),
+                        price: 63,
+                      ),
+                      PlantCard(
+                        str1: "14 Days VIP Access",
+                        str2: "14 days live streaming all content",
+                        color1: Color(0XFF8F00FF),
+                        color2: Color(0xFFB75BFF),
+                        buttomcolor: Color(0xFF9A19FF),
+                        price: 29,
+                      ),
+                      PlantCard(
+                        str1: "1 Month VIP Access",
+                        str2: "1 Month live streaming all content",
+                        color1: Color(0XFFFF238C),
+                        color2: Color(0xFFFF6FB3),
+                        buttomcolor: Color(0xFFFF3F9B),
+                        price: 49,
+                      ),
+                    ],
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

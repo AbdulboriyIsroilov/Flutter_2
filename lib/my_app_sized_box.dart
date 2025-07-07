@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'resurs/images.dart';
+import 'resurs/text_style.dart';
 
 class MyAppSizedBox extends StatelessWidget {
   const MyAppSizedBox({
@@ -44,11 +45,7 @@ class MyAppSizedBox extends StatelessWidget {
             left: 18,
             child: Text(
               "MAN. UNITED",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
+              style: AppStyle.style1
             ),
           ),
           Positioned(
@@ -56,11 +53,7 @@ class MyAppSizedBox extends StatelessWidget {
             left: 18,
             child: Text(
               "VS NEWCASTLE",
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
+              style: AppStyle.style1
             ),
           ),
           Positioned(
@@ -76,11 +69,7 @@ class MyAppSizedBox extends StatelessWidget {
               child: Center(
                 child: Text(
                   "02:31",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFFFFFFFF),
-                  ),
+                  style: AppStyle.style2
                 ),
               ),
             ),
