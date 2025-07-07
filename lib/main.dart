@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_2/my_app_column.dart';
+import 'package:flutter_2/my_app_sized_box.dart';
 import 'package:flutter_2/plant_card_container.dart';
+import 'package:flutter_2/my_app_column.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,161 +53,111 @@ class MyApp extends StatelessWidget {
                 //   buttomcolor: Color(0xFFFF3F9B),
                 //   price: 49,
                 // ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 150,
-                  child: Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/pic1.jpg",
-                          width: 250,
-                          height: 150,
-                          fit: BoxFit.cover,
-                        ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Match Highlight",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFEAEAEA),
                       ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/pink_overlay.png",
-                          width: 250,
-                          height: 150,
-                        ),
+                    ),
+                    Text(
+                      "See All",
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF8D8D8D),
                       ),
-                      Positioned(
-                        top: 17.11,
-                        left: 14,
-                        child: Image.asset(
-                          "assets/premiere_league.png",
-                          width: 26,
-                          height: 26.17,
-                        ),
-                      ),
-                      Positioned(
-                        top: 77,
-                        left: 18,
-                        child: Text(
-                          "MAN. UNITED",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 96,
-                        left: 18,
-                        child: Text(
-                          "VS NEWCASTLE",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 123,
-                        left: 201,
-                        child: Container(
-                          width: 36,
-                          height: 17,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF000000),
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "02:31",
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xFFFFFFFF),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 150,
-                  child: Stack(
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    spacing: 12,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/Group 827.png",
-                          width: 250,
-                          height: 150,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/pink_overlay.png",
-                          width: 250,
-                          height: 150,
-                        ),
-                      ),
-                      Positioned(
-                        top: 17.11,
-                        left: 14,
-                        child: Image.asset(
-                          "assets/1340920153.png",
-                          width: 28,
-                          height: 26,
-                        ),
-                      ),
-                      Positioned(
-                        top: 77,
-                        left: 18,
-                        child: Text(
-                          "AC MILAN",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 96,
-                        left: 18,
-                        child: Text(
-                          "VS FIORENTINA",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 123,
-                        left: 201,
-                        child: Container(
-                          width: 36,
-                          height: 17,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF000000),
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "12:55",
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xFFFFFFFF),
+                      MyAppSizedBox(),
+                      SizedBox(
+                        width: 250,
+                        height: 150,
+                        child: Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                "assets/Group 827.png",
+                                width: 250,
+                                height: 150,
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                "assets/pink_overlay.png",
+                                width: 250,
+                                height: 150,
+                              ),
+                            ),
+                            Positioned(
+                              top: 17.11,
+                              left: 14,
+                              child: Image.asset(
+                                "assets/1340920153.png",
+                                width: 28,
+                                height: 26,
+                              ),
+                            ),
+                            Positioned(
+                              top: 77,
+                              left: 18,
+                              child: Text(
+                                "AC MILAN",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 96,
+                              left: 18,
+                              child: Text(
+                                "VS FIORENTINA",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 123,
+                              left: 201,
+                              child: Container(
+                                width: 36,
+                                height: 17,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF000000),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "12:55",
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
