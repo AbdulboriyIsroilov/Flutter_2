@@ -5,7 +5,14 @@ import 'resurs/text_style.dart';
 class MyAppSizedBox extends StatelessWidget {
   const MyAppSizedBox({
     super.key,
+    required this.images1,
+    required this.images2,
+    required this.title1,
+    required this.title2,
+    required this.title3,
   });
+
+  final String images1, images2, title1, title2, title3;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +24,7 @@ class MyAppSizedBox extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
-              AddImages.image1,
+              images1,
               width: 250,
               height: 150,
               fit: BoxFit.cover,
@@ -26,7 +33,7 @@ class MyAppSizedBox extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
-              AddImages.image2,
+              AddImages.image3,
               width: 250,
               height: 150,
             ),
@@ -35,7 +42,7 @@ class MyAppSizedBox extends StatelessWidget {
             top: 17.11,
             left: 14,
             child: Image.asset(
-              AddImages.image3,
+              images2,
               width: 26,
               height: 26.17,
             ),
@@ -44,16 +51,16 @@ class MyAppSizedBox extends StatelessWidget {
             top: 77,
             left: 18,
             child: Text(
-              "MAN. UNITED",
-              style: AppStyle.style1
+              title1,
+              style: AppStyle.style1,
             ),
           ),
           Positioned(
             top: 96,
             left: 18,
             child: Text(
-              "VS NEWCASTLE",
-              style: AppStyle.style1
+              title2,
+              style: AppStyle.style1,
             ),
           ),
           Positioned(
@@ -68,8 +75,8 @@ class MyAppSizedBox extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "02:31",
-                  style: AppStyle.style2
+                  title3,
+                  style: AppStyle.style2,
                 ),
               ),
             ),
